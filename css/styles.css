@@ -114,6 +114,10 @@ h1 {
   content: ", ";
   font-style: normal;
 }
+.tag:before {
+  content: ", ";
+  font-style: bold;
+}
 
 @media (min-width: 768px) {
   body {

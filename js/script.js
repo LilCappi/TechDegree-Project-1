@@ -8,11 +8,11 @@ project 1 - A Random Quote Generator
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
 const quotes = [
-  {quote: 'Sometimes, we have to look beyond what we want and do what is best.', source: 'Piccolo', citation: 'Dragon Ball Z'},
+  {quote: 'Sometimes, we have to look beyond what we want and do what is best.', source: 'Piccolo', citation: 'Dragon Ball Z', year: '1999'},
   {quote: `If you can't do something, then don't. Focus on what you can do.`, source: 'Shiroe', citation: 'Log Horizon'},
   {quote: 'The only thing we have to fear is fear itself.', source: 'Franklin D. Roosevelt', year: '1933'},
-  {quote: 'The road to success is always under contruction.', source: 'Lily Tomlin'},
-  {quote: `Don't let yesterday take up too much of today.`, source: 'Will Rogers'},
+  {quote: 'The road to success is always under contruction.', source: 'Lily Tomlin', tag: 'Inspirational'},
+  {quote: `Don't let yesterday take up too much of today.`, source: 'Will Rogers', tag: 'Motivational'},
   {quote: 'It does not matter how slowly you go as long as you do not stop.', source: 'Confucius'}
 ]
 
@@ -42,7 +42,7 @@ function printQuote() {
   let htmlString = [
     `<p class="quote">${randomQuote.quote}</p>`,
     `<p class="source">${randomQuote.source}`
-  ];
+  ]
 
 // if statements are placed to check for additional elements within the randomQuote object (citation and year)
 
@@ -50,7 +50,10 @@ function printQuote() {
     htmlString.push(`<span class="citation">${randomQuote.citation}</span>`)
   }
   if (randomQuote.year) {
-      htmlString.push(`<span class="year">${randomQuote.year}</span>`)
+    htmlString.push(`<span class="year">${randomQuote.year}</span>`)
+  }
+  if (randomQuote.tag) {
+    htmlString.push(`<span class="tag">${randomQuote.tag}</span>`)
   }
 
   // Final closing '</p>' tag is added and innerHTML is used to push htmlString.join('') to html file
