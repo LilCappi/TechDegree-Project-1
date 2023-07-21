@@ -64,7 +64,6 @@ function printQuote() {
   const randomBackground = `rgb(${randomNumberGenerator(250)}, ${randomNumberGenerator(250)}, ${randomNumberGenerator(250)})`
 
   document.body.style.backgroundColor = randomBackground; // citation: https://stackoverflow.com/questions/197748/how-do-i-change-the-background-color-with-javascript
-
 }
 
 /***
